@@ -7,8 +7,8 @@ if(!isset($_SESSION['user_email'])){
 ?>
 
 <!DOCTYPE>
-<html>
-    <head>
+<html
+    <head
         <title>This is Admin Panel</title>
         <link rel="stylesheet" href="styles/style.css" media="all" />
     </head>
