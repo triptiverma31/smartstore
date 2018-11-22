@@ -3,7 +3,7 @@ session_start();
 include "db.php";
 
 if(isset($_POST['f_name'])){
-	
+
 	$f_name = $_POST["f_name"];
 	$l_name = $_POST["l_name"];
 	$email = $_POST['email'];
@@ -18,7 +18,7 @@ if(isset($_POST['f_name'])){
 
 if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empty($repassword) ||
 	empty($mobile) || empty($address1) || empty($address2)){
-		
+
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>PLease Fill all fields..!</b>
@@ -112,80 +112,26 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 	}
 	else {
 		$password = md5($password);
-		$sql = "INSERT INTO `user_info` 
-		(`user_id`, `first_name`, `last_name`, `email`, 
-		`password`, `mobile`, `address1`, `address2`) 
-		VALUES (NULL, '$f_name', '$l_name', '$email', 
+		$sql = "INSERT INTO `user_info`
+		(`user_id`, `first_name`, `last_name`, `email`,
+		`password`, `mobile`, `address1`, `address2`)
+		VALUES (NULL, '$f_name', '$l_name', '$email',
 		'$password', '$mobile', '$address1', '$address2')";
 		$run_query = mysqli_query($con,$sql);
 		$_SESSION["uid"] = mysqli_insert_id($con);
 		$_SESSION["name"] = $f_name;
 		$ip_add = getenv("REMOTE_ADDR");
-		
+
 		/*$sql = "UPDATE cart SET user_id = '$_SESSION[uid]' WHERE ip_add='$ip_add' AND user_id = -1";
 		if(mysqli_query($con,$sql)){
 			echo "entered1";
 			exit();
 		}*/
 		$mssg = "registration is successful";
-			echo  "<script type='text/javascript'> alert('$mssg'); 
+			echo  "<script type='text/javascript'> alert('$mssg');
 				   location.href='".'profile'.".php'; </script>" ;
 	}
 	}
 }
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
