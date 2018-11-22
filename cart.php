@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">Khan Store</a>
+				<a href="#" class="navbar-brand">Smart Store</a>
 			</div>
 		<div class="collapse navbar-collapse" id="collapse">
 			<ul class="nav navbar-nav">
@@ -78,7 +78,7 @@
 						<!--<div class="row">
 							<div class="col-md-8"></div>
 							<div class="col-md-4">
-								<b>Total $500000</b>
+								<b>Total 500000</b>
 							</div> -->
 						</div>
 					</div>
