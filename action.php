@@ -69,7 +69,7 @@ if(isset($_POST["getProduct"])){
 			$pro_image = $row['product_image'];
 			echo "
 				<div class='col-md-4'>
-							<div class='panel panel-info'>
+							<div class='panel panel-primary'>
 								<div class='panel-heading'>$pro_title</div>
 								<div class='panel-body'>
 									<img src='product_images/$pro_image' style='width:160px; height:250px;'/>
@@ -78,7 +78,7 @@ if(isset($_POST["getProduct"])){
 									<button pid='$pro_id' style='float:right;' id='product' class='btn btn-danger btn-xs'>AddToCart</button>
 								</div>
 							</div>
-						</div>	
+						</div>
 			";
 		}
 	}
@@ -94,7 +94,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 		$keyword = $_POST["keyword"];
 		$sql = "SELECT * FROM products WHERE product_keywords LIKE '%$keyword%'";
 	}
-	
+
 	$run_query = mysqli_query($con,$sql);
 	while($row=mysqli_fetch_array($run_query)){
 			$pro_id    = $row['product_id'];
@@ -105,7 +105,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 			$pro_image = $row['product_image'];
 			echo "
 				<div class='col-md-4'>
-							<div class='panel panel-info'>
+							<div class='panel panel-primary'>
 								<div class='panel-heading'>$pro_title</div>
 								<div class='panel-body'>
 									<img src='product_images/$pro_image' style='width:160px; height:250px;'/>
@@ -114,18 +114,18 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 									<button pid='$pro_id' style='float:right;' id='product' class='btn btn-danger btn-xs'>AddToCart</button>
 								</div>
 							</div>
-						</div>	
+						</div>
 			";
 		}
 	}
-	
+
 
 
 	if(isset($_POST["addToCart"])){
-		
+
 
 		$p_id = $_POST["proId"];
-		
+
 
 		if(isset($_SESSION["uid"])){
 
@@ -143,7 +143,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 			";//not in video
 		} else {
 			$sql = "INSERT INTO `cart`
-			(`p_id`, `ip_add`, `user_id`, `qty`) 
+			(`p_id`, `ip_add`, `user_id`, `qty`)
 			VALUES ('$p_id','$ip_add','$user_id','1')";
 			if(mysqli_query($con,$sql)){
 				echo "
@@ -166,7 +166,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 					exit();
 			}
 			$sql = "INSERT INTO `cart`
-			(`p_id`, `ip_add`, `user_id`, `qty`) 
+			(`p_id`, `ip_add`, `user_id`, `qty`)
 			VALUES ('$p_id','$ip_add','-1','1')";
 			if (mysqli_query($con,$sql)) {
 				echo "
@@ -177,12 +177,12 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 				";
 				exit();
 			}
-			
+
 		}
-		
-		
-		
-		
+
+
+
+
 	}
 
 //Count User cart item
@@ -194,7 +194,7 @@ if (isset($_POST["count_item"])) {
 		//When user is not logged in then we will count number of item in cart by using users unique ip address
 		$sql = "SELECT COUNT(*) AS count_item FROM cart WHERE ip_add = '$ip_add' AND user_id < 0";
 	}
-	
+
 	$query = mysqli_query($con,$sql);
 	$row = mysqli_fetch_array($query);
 	echo $row["count_item"];
@@ -232,7 +232,7 @@ if (isset($_POST["Common"])) {
 						<div class="col-md-3">'.$product_title.'</div>
 						<div class="col-md-3">$'.$product_price.'</div>
 					</div>';
-				
+
 			}
 			?>
 				<a style="float:right;" href="cart.php" class="btn btn-warning">Edit&nbsp;&nbsp;<span class="glyphicon glyphicon-edit"></span></a>
@@ -254,7 +254,7 @@ if (isset($_POST["Common"])) {
 					$cart_item_id = $row["id"];
 					$qty = $row["qty"];
 
-					echo 
+					echo
 						'<div class="row">
 								<div class="col-md-2">
 									<div class="btn-group">
@@ -271,7 +271,7 @@ if (isset($_POST["Common"])) {
 								<div class="col-md-2"><input type="text" class="form-control total" value="'.$product_price.'" readonly="readonly"></div>
 							</div>';
 				}
-				
+
 				echo '<div class="row">
 							<div class="col-md-8"></div>
 							<div class="col-md-4">
@@ -280,7 +280,7 @@ if (isset($_POST["Common"])) {
 				if (!isset($_SESSION["uid"])) {
 					echo '<input type="submit" style="float:right;" name="login_user_with_product" class="btn btn-info btn-lg" value="Ready to Checkout" >
 							</form>';
-					
+
 				}else if(isset($_SESSION["uid"])){
 					//Paypal checkout form
 					echo '
@@ -289,20 +289,20 @@ if (isset($_POST["Common"])) {
 							<input type="hidden" name="cmd" value="_cart">
 							<input type="hidden" name="business" value="shoppingcart@smartstore.com">
 							<input type="hidden" name="upload" value="1">';
-							  
+
 							$x=0;
 							$sql = "SELECT a.product_id,a.product_title,a.product_price,a.product_image,b.id,b.qty FROM products a,cart b WHERE a.product_id=b.p_id AND b.user_id='$_SESSION[uid]'";
 							$query = mysqli_query($con,$sql);
 							while($row=mysqli_fetch_array($query)){
 								$x++;
-								echo  	
+								echo
 									'<input type="hidden" name="item_name_'.$x.'" value="'.$row["product_title"].'">
 								  	 <input type="hidden" name="item_number_'.$x.'" value="'.$x.'">
 								     <input type="hidden" name="amount_'.$x.'" value="'.$row["product_price"].'">
 								     <input type="hidden" name="quantity_'.$x.'" value="'.$row["qty"].'">';
 								}
-							  
-							echo   
+
+							echo
 								'<input type="hidden" name="return" value="http://localhost/sample/smartstore/payment_success.php"/>
 					                <input type="hidden" name="notify_url" value="http://localhost/sample/smartstore/payment_success.php">
 									<input type="hidden" name="cancel_return" value="http://localhost/sample/smartstore/cancel.php"/>
@@ -315,8 +315,8 @@ if (isset($_POST["Common"])) {
 				}
 			}
 	}
-	
-	
+
+
 }
 
 //Remove Item From cart
@@ -359,9 +359,3 @@ if (isset($_POST["updateCartItem"])) {
 
 
 ?>
-
-
-
-
-
-

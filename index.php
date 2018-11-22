@@ -8,7 +8,7 @@ if(isset($_SESSION["uid"])){
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Smart Store</title>
+		<title>Smart store</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -29,7 +29,7 @@ if(isset($_SESSION["uid"])){
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">Smart Store</a>
+				<a href="#" class="navbar-brand">Smart store</a>
 			</div>
 		<div class="collapse navbar-collapse" id="collapse">
 			<ul class="nav navbar-nav">
@@ -126,14 +126,14 @@ if(isset($_SESSION["uid"])){
 					<div class="col-md-12 col-xs-12" id="product_msg">
 					</div>
 				</div>
-				<div class="panel panel-info">
+				<div class="panel panel-primary">
 					<div class="panel-heading">Products</div>
 					<div class="panel-body">
 						<div id="get_product">
 							<!--Here we get product jquery Ajax Request-->
 						</div>
 						<!--<div class="col-md-4">
-							<div class="panel panel-info">
+							<div class="panel panel-primary">
 								<div class="panel-heading">Samsung Galaxy</div>
 								<div class="panel-body">
 									<img src="product_images/images.JPG"/>
