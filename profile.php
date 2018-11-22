@@ -113,7 +113,7 @@ if(!isset($_SESSION["uid"])){
 					<div class="col-md-12 col-xs-12" id="product_msg">
 					</div>
 				</div>
-				<div class="panel panel-warning" id="scroll">
+				<div class="panel panel-default" id="scroll">
 					<div class="panel-heading">Products</div>
 					<div class="panel-body">
 						<div id="get_product">
