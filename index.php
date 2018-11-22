@@ -8,7 +8,7 @@ if(isset($_SESSION["uid"])){
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Khan Store</title>
+		<title>Smart store</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -29,7 +29,7 @@ if(isset($_SESSION["uid"])){
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">Khan Store</a>
+				<a href="#" class="navbar-brand">Smart store</a>
 			</div>
 		<div class="collapse navbar-collapse" id="collapse">
 			<ul class="nav navbar-nav">
