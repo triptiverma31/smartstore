@@ -125,7 +125,7 @@ if(!isset($_SESSION["uid"])){
 								<div class="panel-body">
 									<img src="product_images/images.JPG"/>
 								</div>
-								<div class="panel-heading">$.500.00
+								<div class="panel-heading">₹.500.00
 									<button style="float:right;" class="btn btn-danger btn-xs">AddToCart</button>
 								</div>
 							</div>
