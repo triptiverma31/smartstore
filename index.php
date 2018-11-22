@@ -8,7 +8,7 @@ if(isset($_SESSION["uid"])){
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Smart Store</title>
+		<title>Khan Store</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -51,7 +51,7 @@ if(isset($_SESSION["uid"])){
 									<div class="col-md-3">Sl.No</div>
 									<div class="col-md-3">Product Image</div>
 									<div class="col-md-3">Product Name</div>
-									<div class="col-md-3">Price in $.</div>
+									<div class="col-md-3">Price in ₹</div>
 								</div>
 							</div>
 							<div class="panel-body">
