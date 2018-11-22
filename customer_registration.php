@@ -6,7 +6,7 @@ if (isset($_GET["register"])) {
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Khan Store</title>
+		<title>Smart store</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -18,9 +18,9 @@ if (isset($_GET["register"])) {
 	<div class="loader"></div>
 </div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">	
+		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="#" class="navbar-brand">Khan Store</a>
+				<a href="#" class="navbar-brand">Smart store</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>
@@ -43,7 +43,7 @@ if (isset($_GET["register"])) {
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<div class="panel panel-primary">
-					<div class="panel-heading">Customer SignUp Form</div>				
+					<div class="panel-heading">Customer SignUp Form</div>
 					<!--form id="signup_form" action="register.php" method="post" onsubmit="return false"-->
 					<form id="signup_form" action="register.php" method="post">
 						<div class="panel-body">
@@ -101,8 +101,8 @@ if (isset($_GET["register"])) {
 						</div>
 						</div>
 					</form>
-					
-					
+
+
 					<div class="panel-footer"></div>
 				</div>
 			</div>
@@ -114,25 +114,3 @@ if (isset($_GET["register"])) {
 	<!--?php
 }
 ?-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

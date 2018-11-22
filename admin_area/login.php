@@ -1,11 +1,11 @@
 <?php 
 session_start();
 ?>
-<!DOCTYPE>
+
 <html>
 	<head>
 		<title>Login Form</title>
-        <link rel="stylesheet" href="styles/login_style.css" media="all" /> 
+        <link rel="stylesheet" href="styles/login_style.css" media="all" />
 	</head>
 <body>
     <div class="login">
@@ -21,16 +21,16 @@ session_start();
 </body>
 </html>
 
-<?php 
-    include("includes/db.php"); 
+<?php
+    include("includes/db.php");
 	if(isset($_POST['login'])){
 		$email = mysqli_real_escape_string($con, $_POST['email']);
 		$pass = mysqli_real_escape_string($con, $_POST['password']);
         $sel_user = "select * from admins where user_email='$email' AND user_pass='$pass'";
-        $run_user = mysqli_query($con, $sel_user); 
-        $check_user = mysqli_num_rows($run_user); 
+        $run_user = mysqli_query($con, $sel_user);
+        $check_user = mysqli_num_rows($run_user);
         if($check_user==1){
-            $_SESSION['user_email']=$email; 
+            $_SESSION['user_email']=$email;
             echo "<script>window.open('index.php?logged_in=You have successfully Logged in!','_self')</script>";
         }
         else {

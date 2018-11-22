@@ -18,7 +18,7 @@
 	<div class="loader"></div>
 </div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">	
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
 					<span class="sr-only">navigation</span>
@@ -43,7 +43,7 @@
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8" id="cart_msg">
-				<!--Cart Message--> 
+				<!--Cart Message-->
 			</div>
 			<div class="col-md-2"></div>
 		</div>
@@ -59,7 +59,7 @@
 							<div class="col-md-2 col-xs-2"><b>Product Name</b></div>
 							<div class="col-md-2 col-xs-2"><b>Quantity</b></div>
 							<div class="col-md-2 col-xs-2"><b>Product Price</b></div>
-							<div class="col-md-2 col-xs-2"><b>Price in $</b></div>
+							<div class="col-md-2 col-xs-2"><b>Price in ₹</b></div>
 						</div>
 						<div id="cart_checkout"></div>
 						<!--<div class="row">
@@ -78,32 +78,15 @@
 						<!--<div class="row">
 							<div class="col-md-8"></div>
 							<div class="col-md-4">
-								<b>Total $500000</b>
+								<b>Total 500000</b>
 							</div> -->
-						</div> 
+						</div>
 					</div>
 					<div class="panel-footer"></div>
 				</div>
 			</div>
 			<div class="col-md-2"></div>
-			
+
 		</div>
-</body>	
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		

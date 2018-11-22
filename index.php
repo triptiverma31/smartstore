@@ -21,7 +21,7 @@ if(isset($_SESSION["uid"])){
 	<div class="loader"></div>
 </div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">	
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
 					<span class="sr-only">navigation</span>
@@ -51,7 +51,7 @@ if(isset($_SESSION["uid"])){
 									<div class="col-md-3">Sl.No</div>
 									<div class="col-md-3">Product Image</div>
 									<div class="col-md-3">Product Name</div>
-									<div class="col-md-3">Price in $.</div>
+									<div class="col-md-3">Price in ₹</div>
 								</div>
 							</div>
 							<div class="panel-body">
@@ -82,8 +82,8 @@ if(isset($_SESSION["uid"])){
 										<!--p><br/></p-->
 										<input type="submit" class="btn btn-success" style="float:right;">
 										<p><br/></p>
-										<a href="#" style="color:white; list-style:none;">Forgotten Password? &nbsp&nbsp </a><a href="customer_registration.php" style="color:white; list-style:none;">Create Account</a> 
-										
+										<a href="#" style="color:white; list-style:none;">Forgotten Password? &nbsp&nbsp </a><a href="customer_registration.php" style="color:white; list-style:none;">Create Account</a>
+
 									</form>
 								</div>
 								<!--div class="panel-footer" id="e_msg"></div-->
@@ -94,7 +94,7 @@ if(isset($_SESSION["uid"])){
 			</ul>
 		</div>
 	</div>
-</div>	
+</div>
 	<p><br/></p>
 	<p><br/></p>
 	<p><br/></p>
@@ -152,51 +152,3 @@ if(isset($_SESSION["uid"])){
 	</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
