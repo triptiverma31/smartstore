@@ -1,4 +1,4 @@
-<?php
+20182018<?php
 session_start();
 if(isset($_SESSION["uid"])){
 	header("location:profile.php");
@@ -144,7 +144,7 @@ if(isset($_SESSION["uid"])){
 							</div>
 						</div> -->
 					</div>
-					<div class="panel-footer">&copy; 2016</div>
+					<div class="panel-footer">&copy; 2018</div>
 				</div>
 			</div>
 			<div class="col-md-1"></div>
