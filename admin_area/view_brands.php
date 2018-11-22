@@ -1,5 +1,5 @@
 
-<table width="795" align="center" bgcolor="pink">
+<table width="795" align="center" bgcolor="#e6ecff" style="opacity:.8">
     <tr align="center">
         <td colspan="6"><h2>View All Brands Here</h2></td>
     </tr>

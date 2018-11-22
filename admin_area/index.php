@@ -9,13 +9,14 @@ if(!isset($_SESSION['user_email'])){
 <!DOCTYPE>
 <html>
     <head>
-        <title>This is Admin Panel</title>
+        <title>Admin Panel</title>
         <link rel="stylesheet" href="styles/style.css" media="all" />
     </head>
-    
+
     <body>
         <div class="main_wrapper">
-            <div id="header"></div>
+            <div id="header">
+            <p  style="padding-top :30px;padding-left: 100px; font-size: 50px">Admin panel</p>  </div>
             <div id="right">
                 <h2 style="text-align:center;">Manage Content</h2>
                     <a href="index.php?insert_product">Insert New Product</a>
@@ -31,7 +32,6 @@ if(!isset($_SESSION['user_email'])){
 
             </div>
             <div id="left">
-                
                 <h2 style="color:red; text-align:center;"><?php echo @$_GET['logged_in'];?></h2>
                 <?php
                     if(isset($_GET['insert_product'])){
