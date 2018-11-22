@@ -29,7 +29,7 @@ if(isset($_SESSION["uid"])){
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">Smart store</a>
+				<a href="index.php" class="navbar-brand">Smart store</a>
 			</div>
 		<div class="collapse navbar-collapse" id="collapse">
 			<ul class="nav navbar-nav">
@@ -82,7 +82,7 @@ if(isset($_SESSION["uid"])){
 										<!--p><br/></p-->
 										<input type="submit" class="btn btn-success" style="float:right;">
 										<p><br/></p>
-										<a href="#" style="color:white; list-style:none;">Forgotten Password? &nbsp&nbsp </a><a href="customer_registration.php" style="color:white; list-style:none;">Create Account</a>
+										<a href="#" style="color:white; list-style:none;"></a><a href="customer_registration.php" style="color:white; list-style:none;">Create Account</a>
 
 									</form>
 								</div>
