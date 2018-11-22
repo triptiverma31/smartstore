@@ -230,7 +230,7 @@ if (isset($_POST["Common"])) {
 						<div class="col-md-3">'.$n.'</div>
 						<div class="col-md-3"><img class="img-responsive" src="product_images/'.$product_image.'" /></div>
 						<div class="col-md-3">'.$product_title.'</div>
-						<div class="col-md-3">$'.$product_price.'</div>
+						<div class="col-md-3">₹'.$product_price.'</div>
 					</div>';
 
 			}
